@@ -1,305 +1,169 @@
-⚙️ CHỨC NĂNG CHÍNH CỦA HỆ THỐNG
-👤 Chức năng người dùng (User)
+# 🎑 Website Bán Bánh Trung Thu – Laravel Ecommerce
+
+Dự án xây dựng website thương mại điện tử chuyên bán bánh trung thu, đảm bảo giao diện đẹp – hiện đại – chuẩn UX/UI, đồng thời hỗ trợ đầy đủ các nghiệp vụ mua sắm, thanh toán và quản trị hệ thống.
+
+---
+
+# 📘 Thông Tin Đồ Án
+- 🏫 Trường: Đại học Công Thương TP.HCM  
+- 📚 Học phần: Lập Trình Mã Nguồn Mở  
+- 👨‍🏫 GVHD: Huỳnh Khắc Duy  
+- 👥 Nhóm: 13  
+
+### 👑 Vai trò thành viên
+| Thành viên | MSSV | Vai trò |
+|------------|--------|---------|
+| Nguyễn Viết Tiến | 2001224408 | ⭐ Thiết kế giao diện + Xử lý nghiệp vụ + Code chức năng + Test hệ thống |
+| Đặng Cam Hồng | 2001221533 | Thiết kế giao diện + Database |
+| Trần Dương Tường Vy | 2001225950 | Backend + Test |
+
+---
+
+# 🏗️ Cấu trúc dự án Laravel
+```plaintext
+app/
+bootstrap/
+config/
+database/
+public/
+resources/
+routes/
+.env
+composer.json
+
+# ⚙️ CHỨC NĂNG CHÍNH CỦA HỆ THỐNG
+
+# 👤 Chức năng người dùng (User)
+
 🔐 1. Xác thực người dùng
-
-
-Đăng ký tài khoản
-
-
-Đăng nhập
-
-
-Đăng xuất
-
-
-Xác minh email qua PHPMailer
-
-
-Quên mật khẩu
-
-
-Quản lý tài khoản cá nhân
-
+- Đăng ký tài khoản
+- Đăng nhập
+- Đăng xuất
+- Xác minh email qua PHPMailer
+- Quên mật khẩu
+- Quản lý tài khoản cá nhân
 
 🛒 2. Chức năng sản phẩm
-
-
-Xem danh sách sản phẩm
-
-
-Xem chi tiết sản phẩm
-
-
-Tìm kiếm theo tên
-
-
-Lọc theo danh mục
-
-
-Gợi ý sản phẩm liên quan
-
+- Xem danh sách sản phẩm
+- Xem chi tiết sản phẩm
+- Tìm kiếm theo tên
+- Lọc theo danh mục
 
 🛍️ 3. Giỏ hàng
-
-
-Thêm vào giỏ
-
-
-Cập nhật số lượng
-
-
-Xóa sản phẩm
-
-
-Tính tổng tiền
-
-
-Lưu giỏ trong session
-
+- Thêm vào giỏ
+- Cập nhật số lượng
+- Xóa sản phẩm
+- Tính tổng tiền
+- Lưu giỏ trong session
 
 💳 4. Thanh toán
-
-
-Nhập thông tin giao hàng
-
-
-Thanh toán COD / Online
-
-
-Email xác nhận đơn hàng
-
-
-Mã đơn hàng tự tạo
-
-
-Lưu đơn vào database
-
+- Nhập thông tin giao hàng
+- Thanh toán COD
+- Mã đơn hàng tự tạo
+- Lưu đơn vào database
 
 📦 5. Quản lý đơn hàng
+- Xem lịch sử đơn hàng
+- Xem trạng thái đơn
+- Xem chi tiết đơn hàng
+---
 
+# 🛠️ Chức năng dành cho quản trị viên (Admin)
 
-Xem lịch sử đơn hàng
-
-
-Xem trạng thái
-
-
-Xem chi tiết
-
-
-⭐ 6. Đánh giá sản phẩm
-
-
-Đánh giá 1–5 sao
-
-
-Viết bình luận
-
-
-Xem đánh giá của người khác
-
-
-
-🛠️ Chức năng dành cho quản trị viên (Admin)
 📦 1. Quản lý sản phẩm
-
-
-Thêm / sửa / xóa
-
-
-Upload hình (Cloudinary)
-
-
-Quản lý tồn kho
-
-
-Quản lý giá & mô tả
-
+- Thêm / sửa / xóa sản phẩm
+- Upload ảnh (Cloudinary)
+- Quản lý giá & mô tả
 
 🗂️ 2. Quản lý danh mục
-
-
-Thêm
-
-
-Sửa
-
-
-Xóa
-
-
-Đếm số sản phẩm trong danh mục
-
+- Thêm danh mục
+- Sửa danh mục
+- Xóa danh mục
+- Thống kê số lượng sản phẩm trong danh mục
 
 📑 3. Quản lý đơn hàng
-
-
-Xem tất cả đơn
-
-
-Cập nhật trạng thái
-
-
-Xác nhận thanh toán
-
-
-Xuất hóa đơn
-
+- Xem tất cả đơn
+- Cập nhật trạng thái đơn
+- Xác nhận thanh toán
+- Xuất hóa đơn
+- Theo dõi lịch sử xử lý đơn
 
 👥 4. Quản lý người dùng
-
-
-Xem danh sách
-
-
-Khóa / mở khóa tài khoản
-
-
-Phân quyền User / Admin
-
+- Xem danh sách user
+- Khóa / mở khóa tài khoản
+- Phân quyền User / Admin
 
 📊 5. Dashboard thống kê
+- Doanh thu theo ngày / tháng / năm
+- Sản phẩm bán chạy
+- Biểu đồ dạng Bar / Line / Pie
 
+🔒 6. Bảo mật hệ thống
+- Middleware phân quyền
+- JWT Login / Session
+- CSRF Token
+- Chống SQL Injection
+- Chống XSS
 
-Doanh thu ngày / tháng / năm
+---
 
-
-Sản phẩm bán chạy
-
-
-Biểu đồ (Bar / Line / Pie)
-
-
-🔒 6. Bảo mật
-
-
-Middleware phân quyền
-
-
-JWT Login
-
-
-CSRF Token
-
-
-Chống SQL Injection
-
-
-Chống XSS
-
-
-
-🧱 Cơ sở dữ liệu
+# 🧱 Cơ sở dữ liệu
 Các bảng chính:
+- users
+- categories
+- products
+- orders
+- order_items
+- sessions
 
+---
 
-users
+# 🚀 Hướng Dẫn Cài Đặt
 
-
-categories
-
-
-products
-
-
-orders
-
-
-order_items
-
-
-sessions
-
-
-
-🚀 Hướng Dẫn Cài Đặt
-1. Clone dự án
+1. Clone dự án:
 git clone <link_repo>
 cd <thu_muc_du_an>
 
-2. Cài đặt Composer
+2. Cài đặt Composer:
 composer install
 
-3. Tạo file môi trường
+3. Tạo file môi trường:
 cp .env.example .env
 
-Cập nhật cấu hình DB:
+4. Cấu hình database (.env):
 DB_DATABASE=banhtrungthu
 DB_USERNAME=root
 DB_PASSWORD=
 
-4. Generate APP KEY
+5. Generate APP KEY:
 php artisan key:generate
 
-5. Tạo bảng database
+6. Tạo bảng database:
 php artisan migrate
 
-6. Chạy server
+7. Chạy server:
 php artisan serve
 
-👉 Truy cập website: http://localhost:8000
-
-👑 Vai Trò – Nguyễn Viết Tiến
-⭐ 1. Thiết kế giao diện (UI/UX)
-
-
-Layout tổng thể
-
-
-Theme Trung Thu
-
-
-Responsive mọi thiết bị
-
-
-Blade Template
-
-
-⭐ 2. Xử lý nghiệp vụ (Business Logic)
-
-
-Giỏ hàng (add/update/delete)
-
-
-CRUD sản phẩm
-
-
-Xử lý thanh toán
-
-
-Đổ dữ liệu ra giao diện
-
-
-Validation form
-
-
-Logic nội bộ hệ thống
-
-
-⭐ 3. Code & Testing
-
-
-Test toàn hệ thống
-
-
-Debug frontend & backend
-
-
-Tối ưu hiệu năng & bảo mật
-
-
-
-❤️ Cảm ơn đã xem dự án!
+Truy cập website: http://localhost:8000
 
 ---
 
-# 🎉 **XONG – Đây là phiên bản bạn muốn!**  
-→ TẤT CẢ đều là **một khối CODE duy nhất**, GitHub sẽ hiển thị đúng 100%.
+# 👑 Vai Trò – Nguyễn Viết Tiến
 
-Nếu bạn muốn:
+⭐ 1. Thiết kế giao diện (UI/UX)
+- Thiết kế bố cục tổng thể
+- Theme Trung Thu (tím – vàng)
+- Responsive mọi thiết bị
+- Template Blade tối ưu hiệu năng
 
-🔥 **Tạo README theo style PRO (có badge, banner, màu gradient)**  
-🔥 **Chèn hình ảnh giao diện từ file ZIP bạn gửi**  
-🔥 **Tôi xuất file README.md để bạn tải**
+⭐ 2. Xử lý nghiệp vụ (Business Logic)
+- Giỏ hàng (add/update/delete)
+- CRUD sản phẩm
+- Logic thanh toán
+- Đổ dữ liệu lên giao diện
+- Validation form
+- Logic nội bộ sản phẩm & đơn hàng
 
-Chỉ cần nói: **"Làm bản đẹp hơn"** hoặc **"Xuất file README.md"**.
+---
+
+# ❤️ Cảm ơn đã xem dự án!
