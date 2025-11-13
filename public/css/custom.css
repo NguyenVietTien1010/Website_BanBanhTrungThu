@@ -1,0 +1,1448 @@
+/* ============================================
+   🎑 Custom Theme: Tiệm Bánh Trung Thu
+   Phong cách Maison Mooncake sang trọng
+   Chủ đạo: Vàng kem – Tím nho – Đỏ đô
+   ============================================ */
+
+/* ===== Màu chính (CSS Variables) ===== */
+:root {
+  --cream-bg: #FFF6E5;       /* Nền sáng */
+  --gold-soft: #FBE6A2;      /* Vàng nhạt ánh kim */
+  --gold-deep: #FFD87C;      /* Vàng đậm hơn */
+  --gold-text: #EECF6D;      /* Vàng chữ */
+  --purple-royal: #7A1451;   /* Tím nho */
+  --red-wine: #8B1E3F;       /* Đỏ rượu vang */
+  --plum-deep: #5A0E37;      /* Tím đậm ánh đỏ */
+  --text-dark: #2D2B3A;
+}
+
+/* ===== Tổng thể ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cream-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== HEADER ===== */
+.header-colored {
+  background: linear-gradient(90deg, var(--purple-royal), var(--red-wine));
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+.header-colored .navbar-brand {
+  color: var(--gold-text) !important;
+  text-shadow: 0 0 8px rgba(255, 230, 160, 0.6);
+  font-weight: 700;
+}
+.header-colored .nav-link {
+  color: #FFF !important;
+  font-weight: 500;
+}
+.header-colored .nav-link:hover {
+  color: var(--gold-soft) !important;
+}
+
+/* ===== Nút giỏ hàng ===== */
+.header-colored .btn-gold {
+  background: linear-gradient(90deg, var(--gold-soft) 0%, var(--gold-deep) 100%);
+  color: #000 !important;
+  border: 1px solid rgba(255, 230, 160, 0.6);
+  box-shadow: 0 0 8px rgba(255, 230, 160, 0.3);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.header-colored .btn-gold:hover {
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-soft));
+  transform: translateY(-1px);
+}
+.header-colored .btn-gold .badge {
+  background-color: #000;
+  color: var(--gold-text);
+  border: 1px solid rgba(255, 230, 160, 0.5);
+}
+
+/* ===== Button vàng kim ===== */
+.btn-gold {
+  background: linear-gradient(90deg, var(--gold-soft), var(--gold-deep));
+  color: var(--purple-royal);
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-soft));
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   🌕 SLIDER - PHIÊN BẢN CÂN ĐỐI & CAO CẤP
+   ============================================ */
+
+.hero-slider {
+  border-radius: 28px;
+  background: linear-gradient(180deg, #4B006E 0%, #6A1B9A 100%);
+  padding: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Ảnh rõ nét, full chiều rộng thực tế */
+.hero-slider .hero-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  filter: none;
+  border-radius: 20px;
+  transition: transform 1.2s ease;
+}
+
+.hero-slider .carousel-item.active img {
+  transform: scale(1.015);
+}
+
+/* Caption căn giữa hoàn toàn */
+.centered-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 1.8rem 2rem;
+  border-radius: 18px;
+  width: 60%;
+  max-width: 600px;
+  color: #FFF;
+  animation: fadeInUp 1.2s ease both;
+}
+
+/* Tiêu đề vàng kim */
+.centered-caption .title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  color: #FFD966;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+/* Mô tả */
+.centered-caption .desc {
+  font-size: 1rem;
+  color: #FFFBEA;
+  margin-bottom: 1.2rem;
+}
+
+/* Nút vàng kim tròn sang trọng */
+.btn-gold {
+  background: linear-gradient(90deg, #FFD86A 0%, #FFEAA0 100%);
+  color: #4B004D;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1.4rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.btn-gold:hover {
+  background: linear-gradient(90deg, #FFEAA0 0%, #FFD86A 100%);
+  transform: translateY(-2px);
+}
+
+/* Nút điều hướng */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 215, 0, 0.85);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background-size: 60%;
+}
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #FFD86A;
+}
+
+/* Hiệu ứng xuất hiện chữ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate(-50%, calc(-50% + 20px)); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Giới hạn kích thước slider */
+@media (max-width: 992px) {
+  .hero-slider .hero-image { height: 380px; }
+  .centered-caption { width: 80%; padding: 1.2rem 1.5rem; }
+  .centered-caption .title { font-size: 1.5rem; }
+}
+
+/* ===== Hiệu ứng mượt ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Hover sản phẩm ===== */
+.hover-up:hover {
+  transform: translateY(-6px);
+  transition: transform 0.3s ease;
+}
+
+/* ============================================
+   🟤 FOOTER
+   ============================================ */
+.footer-gold {
+  background: linear-gradient(180deg, var(--purple-royal), var(--plum-deep));
+  color: var(--gold-text);
+  padding: 3rem 0 2rem;
+}
+.footer-gold h5,
+.footer-gold h6,
+.footer-gold p,
+.footer-gold a {
+  color: var(--gold-text) !important;
+}
+.footer-gold a:hover {
+  color: var(--gold-soft) !important;
+}
+.footer-gold hr {
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb {
+  background: var(--purple-royal);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red-wine);
+}
+/* ============================================
+   🏢 BUSINESS & 🌸 PROSPERITY - PREMIUM STYLE
+   ============================================ */
+
+.business-highlight,
+.prosperity-highlight {
+  background: linear-gradient(180deg, #FFFDF5 0%, #FFF8EA 100%);
+  border: 1.5px solid rgba(234, 195, 85, 0.4);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Accent line vàng bên trái */
+.section-accent {
+  width: 60px;
+  height: 5px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #EECF6D, #FFD87C);
+}
+
+/* Tiêu đề và phụ đề */
+.subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.business-highlight h2,
+.prosperity-highlight h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.25);
+}
+
+.text-purple {
+  color: #7A1451 !important;
+}
+
+.text-gold {
+  color: #EECF6D !important;
+}
+
+/* Ảnh có viền ánh kim và bóng nhẹ */
+.image-frame {
+  background: linear-gradient(135deg, #FFFDF5, #FBE6A2);
+  padding: 6px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.image-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(255, 215, 0, 0.3);
+}
+
+/* Đoạn mô tả */
+.business-highlight p,
+.prosperity-highlight p {
+  color: #4B3B3B;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+.business-highlight strong,
+.prosperity-highlight strong {
+  color: #A0244C;
+}
+
+/* Hover nổi khối */
+.business-highlight:hover,
+.prosperity-highlight:hover {
+  box-shadow: 0 8px 20px rgba(255, 200, 100, 0.25);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+/* ============================================
+   🌕 HERO TEXT (GIỚI THIỆU CHÍNH)
+   ============================================ */
+
+.hero-text {
+  background: linear-gradient(180deg, #FFFDF5 0%, #FFF9EB 100%);
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid rgba(234, 195, 85, 0.3);
+  border-radius: 0 0 20px 20px;
+}
+
+.hero-text h1 {
+  color: #7A1451; /* tím chủ đạo Maison */
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-shadow: none !important; /* bỏ phát sáng */
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  color: #5a4a4a;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+}
+
+/* ============================================
+   🎁 BỘ SƯU TẬP TRUNG THU 2025 - CẬP NHẬT CHỮ TRẮNG TO HƠN
+   ============================================ */
+
+.collection-section {
+  background: linear-gradient(180deg, #7B004B 0%, #4B006E 100%);
+  border-radius: 24px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
+  color: #FFF !important;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+/* --- Tiêu đề phụ: BỘ SƯU TẬP --- */
+.collection-section h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #FFD700; /* vàng kim */
+  margin-bottom: 0.5rem;
+}
+
+/* --- Tiêu đề chính: Bánh Trung Thu 2025 --- */
+.collection-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.75rem;
+  color: #FFF;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.collection-section p {
+  color: #ffffff !important; /* chữ đen */
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+
+/* --- Thẻ sản phẩm --- */
+.collection-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.collection-card img {
+  height: 380px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.collection-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(255, 215, 0, 0.25);
+}
+
+/* --- Nút xem toàn bộ --- */
+.collection-section .btn-gold {
+  background: linear-gradient(90deg, #FFD700 0%, #FFED8C 100%);
+  color: #4B006E;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+.collection-section .btn-gold:hover {
+  background: linear-gradient(90deg, #FFED8C 0%, #FFD700 100%);
+  transform: translateY(-2px);
+}
+
+/* --- Hiệu ứng xuất hiện nhẹ --- */
+.fade-in {
+  animation: fadeIn 1s ease both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ============================================
+   💎 CAM KẾT TỪ THƯƠNG HIỆU
+   ============================================ */
+.brand-commitments {
+  background: linear-gradient(180deg, #FFF8F0 0%, #FFF3E0 100%);
+}
+
+.brand-commitments h2 {
+  color: #7B004B;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.commit-card {
+  background: linear-gradient(135deg, #A8005D 0%, #5A0B7A 100%);
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.commit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(255, 215, 0, 0.3);
+}
+
+.commit-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid #FFD700;
+}
+
+.commit-card h5 {
+  color: #FFD966;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+.commit-card p {
+  color: #FFF;
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.9;
+}
+/* ============================================
+   🛍️ HƯỚNG DẪN ĐẶT MUA - Maison Style
+   ============================================ */
+.maison-order {
+  background: linear-gradient(180deg, #FFF9F2 0%, #FFF2E6 100%);
+}
+
+.maison-order h2 {
+  color: #7B004B;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+/* --- Khung chính --- */
+.order-box {
+  border-radius: 28px;
+  border: 3px solid transparent;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.order-box:hover {
+  transform: translateY(-4px);
+}
+
+/* --- Tab tiêu đề nhỏ --- */
+.order-tab {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+/* --- Bên doanh nghiệp --- */
+.enterprise-box {
+  background: linear-gradient(150deg, #6B007A 0%, #A8005D 100%);
+  color: #fff;
+  border: 2px solid #FFD700;
+}
+
+/* --- Bên mua lẻ --- */
+.retail-box {
+  background: #fff;
+  border: 2px solid #A8005D;
+  color: #4B006E;
+}
+
+/* --- Icon vàng hình tròn --- */
+.benefit-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.benefit-icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: #FFD700;
+  border-radius: 50%;
+}
+
+/* --- Lưới logo cửa hàng --- */
+.retail-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.retail-grid img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.retail-grid img:hover {
+  transform: scale(1.08);
+}
+
+/* --- Nền màu phụ --- */
+.bg-rose { background-color: #A8005D; }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .benefit-item { flex-direction: column; text-align: center; }
+  .retail-grid img { width: 60px; height: 60px; }
+}
+/* ============================================
+   💼 DOANH NGHIỆP / ĐẠI LÝ (Maison Style)
+   ============================================ */
+.enterprise-box {
+  position: relative;
+  background: radial-gradient(circle at top left, #6B007A, #A8005D 80%);
+  border-radius: 30px;
+  border: 3px solid #FFD966;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 3rem 2rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Thanh tiêu đề vàng */
+.enterprise-tab {
+  display: inline-block;
+  background: #FFD966;
+  color: #4B006E;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.4rem 1.5rem;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+.enterprise-tab::before,
+.enterprise-tab::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.enterprise-tab::before {
+  left: 0;
+  border-width: 8px 8px 0 0;
+  border-color: #B99A00 transparent transparent transparent;
+}
+.enterprise-tab::after {
+  right: 0;
+  border-width: 8px 0 0 8px;
+  border-color: #B99A00 transparent transparent transparent;
+}
+
+/* Hai vòng tròn ưu đãi */
+.benefit-circle-wrap {
+  flex-wrap: wrap;
+}
+.benefit-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #FFD966;
+  color: #4B006E;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.benefit-circle:hover {
+  transform: scale(1.05);
+}
+.circle-icon {
+  background: #A8005D;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+/* Liên hệ */
+.contact-info {
+  margin-top: 1rem;
+  text-align: center;
+}
+.contact-info i {
+  color: #FFD966;
+}
+.contact-info span {
+  color: #FFD966;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefit-circle {
+    width: 150px;
+    height: 150px;
+    font-size: 0.8rem;
+  }
+  .enterprise-box {
+    padding: 2rem 1.5rem;
+  }
+}
+/* ============================================
+   🩷 KHÁCH HÀNG MUA LẺ (Maison Style)
+   ============================================ */
+.retail-box {
+  position: relative;
+  background: #fff;
+  border-radius: 30px;
+  border: 3px solid #A8005D;
+  box-shadow: 0 10px 30px rgba(168, 0, 93, 0.2);
+  color: #4B006E;
+  padding: 3rem 2.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Thanh tiêu đề hồng */
+.retail-tab {
+  display: inline-block;
+  background: #A8005D;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.4rem 1.5rem;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+.retail-tab::before,
+.retail-tab::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.retail-tab::before {
+  left: 0;
+  border-width: 8px 8px 0 0;
+  border-color: #6B0045 transparent transparent transparent;
+}
+.retail-tab::after {
+  right: 0;
+  border-width: 8px 0 0 8px;
+  border-color: #6B0045 transparent transparent transparent;
+}
+
+/* --- Icon TMĐT nền tròn --- */
+.platform-circle {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #A8005D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.platform-circle img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+.platform-circle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(168, 0, 93, 0.3);
+}
+
+/* --- Logo siêu thị --- */
+.store-logo {
+  width: 80px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.store-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.store-logo img:hover {
+  transform: scale(1.08);
+}
+
+/* --- Căn chỉnh tiêu đề và màu --- */
+.text-royal {
+  color: #5C005C;
+  font-family: 'Playfair Display', serif;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .retail-box {
+    margin-top: 1.5rem;
+    height: auto;
+  }
+  .platform-circle {
+    width: 75px;
+    height: 75px;
+  }
+  .platform-circle img {
+    width: 40px;
+    height: 40px;
+  }
+  .store-logo {
+    width: 70px;
+    height: 55px;
+  }
+}
+/* ============================================
+   🎁 SẢN PHẨM NỔI BẬT - Căn giữa đồng bộ Maison
+   ============================================ */
+
+/* Khối tổng */
+.featured-section {
+  background: #FFF8F0;
+  border-radius: 30px;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center; /* 🟡 Căn giữa toàn bộ nội dung */
+}
+
+/* Tiêu đề & link */
+.section-heading {
+  color: #7B004B;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.text-highlight {
+  color: #D89E00;
+  transition: color 0.3s ease;
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
+}
+.text-highlight:hover {
+  color: #B97A00;
+  text-decoration: underline;
+}
+
+/* Khối tiêu đề và link bố trí hàng ngang nhưng căn giữa */
+.featured-section .d-flex {
+  justify-content: center !important; /* 🟣 Căn giữa tiêu đề + link */
+  gap: 1rem;
+}
+
+/* Card sản phẩm */
+.product-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.35s ease;
+  margin: 0 auto; /* 🟠 Giúp card căn giữa trong cột */
+  max-width: 400px; /* Giới hạn chiều rộng */
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(165, 0, 93, 0.25);
+}
+
+/* Ảnh sản phẩm */
+.product-img-wrap {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+.product-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Thông tin sản phẩm */
+.product-info {
+  background: #fff;
+}
+.product-name {
+  font-size: 1.2rem; /* 🟡 Tăng kích thước */
+  color: #4B006E;
+  margin-bottom: 0.5rem;
+}
+.product-desc {
+  font-size: 1rem;
+  color: #6B6B6B;
+  margin-bottom: 1rem;
+}
+.product-price {
+  color: #C5003E;
+  font-weight: 700;
+  font-size: 1.2rem; /* 🟡 Giá to và nổi bật hơn */
+  margin-bottom: 1rem;
+}
+
+/* Nút xem chi tiết */
+.btn-product {
+  display: inline-block;
+  padding: 0.6rem 1.8rem;
+  border: 2px solid #FFD966;
+  border-radius: 50px;
+  color: #4B006E;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-product:hover {
+  background: #FFD966;
+  box-shadow: 0 6px 16px rgba(255, 217, 102, 0.3);
+  color: #4B006E;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .featured-section {
+    padding: 2rem 1.5rem;
+  }
+  .product-img-wrap {
+    height: 200px;
+  }
+  .section-heading {
+    font-size: 1.8rem;
+  }
+}
+/* ============================================
+   🛍️ DANH SÁCH SẢN PHẨM - Maison Style
+   ============================================ */
+.product-list-section {
+  background: #FFF8F0;
+  border-radius: 30px;
+  margin-top: 2rem;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+}
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #7B004B;
+  text-transform: uppercase;
+}
+
+/* Bộ lọc */
+.filter-bar .form-control,
+.filter-bar .form-select {
+  border-radius: 50px;
+  border: 2px solid #FFD966;
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+}
+.filter-bar .search-input:focus,
+.filter-bar .select-filter:focus {
+  border-color: #B97A00;
+  box-shadow: 0 0 10px rgba(255, 217, 102, 0.4);
+}
+.btn-gold {
+  background: #FFD966;
+  color: #4B006E;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background: #EFCB52;
+  transform: translateY(-2px);
+}
+
+/* Thẻ sản phẩm */
+.product-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(165,0,93,0.25);
+}
+.product-img-wrap {
+  height: 250px;
+  overflow: hidden;
+}
+.product-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.product-card:hover img {
+  transform: scale(1.08);
+}
+.product-name {
+  color: #4B006E;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.product-price {
+  color: #C5003E;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Nút xem chi tiết */
+.btn-gold-outline {
+  display: inline-block;
+  padding: 0.55rem 1.5rem;
+  border: 2px solid #FFD966;
+  border-radius: 50px;
+  color: #4B006E;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-gold-outline:hover {
+  background: #FFD966;
+  box-shadow: 0 6px 16px rgba(255,217,102,0.3);
+  color: #4B006E;
+}
+
+/* Phân trang */
+.pagination {
+  --bs-pagination-color: #4B006E;
+  --bs-pagination-border-color: #FFD966;
+  --bs-pagination-hover-bg: #FFD966;
+  --bs-pagination-active-bg: #FFD966;
+  --bs-pagination-active-color: #4B006E;
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(255,217,102,0.4);
+  border-radius: 50px;
+}
+
+/* Hiệu ứng mượt */
+.fade-in {
+  animation: fadeIn 0.9s ease both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ============================================
+   🛒 MINI CART - MAISON STYLE
+   ============================================ */
+#mini-cart-list {
+  scrollbar-width: thin;
+  scrollbar-color: #D4B678 #f6f0e6;
+}
+#mini-cart-list::-webkit-scrollbar {
+  width: 6px;
+}
+#mini-cart-list::-webkit-scrollbar-thumb {
+  background-color: #D4B678;
+  border-radius: 4px;
+}
+
+/* Nút Maison */
+.btn-gold {
+  background: linear-gradient(90deg, #FFD966 0%, #EFCB52 100%);
+  color: #4B006E;
+  border: none;
+  transition: all 0.25s ease;
+  border-radius: 50px;
+}
+.btn-gold:hover {
+  background: #FFE27A;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(255, 217, 102, 0.3);
+}
+
+/* Hiệu ứng danh sách sản phẩm */
+.list-group-item {
+  border-radius: 12px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.list-group-item:hover {
+  background: #FFF9EB;
+  transform: translateY(-2px);
+}
+
+/* Icon và text */
+.text-royal {
+  color: #4B006E;
+}
+.bg-light-subtle {
+  background: #FFF8F0 !important;
+}
+/* ============================================
+   🛒 CART PAGE - Maison Mooncake Style
+   ============================================ */
+.cart-section {
+  background: #FFF8F0; 
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.table {
+  vertical-align: middle;
+}
+.table th {
+  font-weight: 600;
+  color: #4B006E;
+}
+.table td {
+  color: #333;
+}
+
+/* Ảnh sản phẩm */
+.table img {
+  border: 2px solid #f5e1a4;
+  transition: all 0.25s ease;
+}
+.table img:hover {
+  transform: scale(1.05);
+}
+
+/* Nút Maison */
+.btn-gold {
+  background: linear-gradient(90deg, #FFD966 0%, #EFCB52 100%);
+  color: #4B006E;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.25s ease;
+}
+.btn-gold:hover {
+  background: #FFE27A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 217, 102, 0.3);
+}
+
+/* Fade-in effect */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tổng cộng */
+.table tfoot th {
+  border-top: 2px solid #f5e1a4;
+}
+.btn-outline-danger {
+  border: 1.5px solid #F2B8C6;
+  color: #C5003E;
+  background-color: #fff;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-danger i {
+  font-size: 0.85rem;
+}
+
+.btn-outline-danger:hover {
+  background-color: #C5003E;
+  color: #fff;
+  transform: scale(1.1);
+}
+/* ============================================
+   🩷 LOGIN PAGE - Maison Style
+   ============================================ */
+.login-wrapper {
+  background: url("/images/bg-login.jpg") no-repeat center center/cover;
+  min-height: 80vh;
+  position: relative;
+}
+
+.login-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 248, 240, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.login-card {
+  max-width: 450px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 10;
+  border-radius: 25px;
+}
+
+.text-royal {
+  color: #6B006E !important;
+}
+
+.btn-gold {
+  background: linear-gradient(90deg, #FFD966, #F2C94C);
+  border: none;
+  color: #4B006E;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background: linear-gradient(90deg, #F2C94C, #FFD966);
+  color: #4B006E;
+  box-shadow: 0 0 10px rgba(242, 201, 76, 0.6);
+}
+
+.form-control:focus {
+  border-color: #C28F00;
+  box-shadow: 0 0 0 0.25rem rgba(255, 217, 102, 0.35);
+}
+/* ============================================
+   🩷 LOGIN & REGISTER PAGE - Maison Style
+   ============================================ */
+.login-wrapper {
+  background: url("/images/bg-login.jpg") no-repeat center center/cover;
+  min-height: 90vh;
+  position: relative;
+}
+
+.login-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 248, 240, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.login-card {
+  max-width: 450px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 10;
+  border-radius: 25px;
+}
+
+.text-royal {
+  color: #6B006E !important;
+}
+
+.btn-gold {
+  background: linear-gradient(90deg, #FFD966, #F2C94C);
+  border: none;
+  color: #4B006E;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background: linear-gradient(90deg, #F2C94C, #FFD966);
+  color: #4B006E;
+  box-shadow: 0 0 10px rgba(242, 201, 76, 0.6);
+}
+
+.form-control:focus {
+  border-color: #C28F00;
+  box-shadow: 0 0 0 0.25rem rgba(255, 217, 102, 0.35);
+}
+/* ========================
+   PRODUCT DETAIL PAGE
+   ======================== */
+.star-rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #FFD700;
+}
+
+.product-image-wrapper img {
+  transition: transform 0.3s ease;
+}
+
+.product-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+/* ==============================
+   CHECKOUT PAGE BACKGROUND
+   ============================== */
+.checkout-wrapper {
+  background: url('../images/bg-login.jpg') no-repeat center center / cover;
+  background-color: #FFF8F0; /* fallback */
+  min-height: 80vh;
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.checkout-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 248, 240, 0.85); /* lớp phủ nhẹ để chữ dễ đọc */
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
+.checkout-wrapper .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cải thiện form */
+.form-control {
+  border: 1px solid #e4c6b4;
+  background-color: #fffaf7;
+}
+.form-control:focus {
+  border-color: #d89e00;
+  box-shadow: 0 0 0 0.25rem rgba(255, 217, 102, 0.3);
+}
+/* ==============================
+   ORDER SUCCESS PAGE
+   ============================== */
+
+
+.order-success-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 248, 240, 0.88);
+  backdrop-filter: blur(3px);
+  z-index: 0;
+}
+
+.order-success-wrapper > div {
+  position: relative;
+  z-index: 2;
+}
+
+/* Text colors */
+.text-royal {
+  color: #6B006E !important;
+}
+.text-gold {
+  color: #D4A017 !important;
+}
+
+/* Button style */
+.btn-gold {
+  background: linear-gradient(90deg, #FFD966, #F2C94C);
+  border: none;
+  color: #4B006E;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.btn-gold:hover {
+  background: linear-gradient(90deg, #F2C94C, #FFD966);
+  color: #4B006E;
+  transform: scale(1.05);
+}
+
+/* Animation (if Animate.css not available, fallback below) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate__fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+/* ====================================
+   ABOUT PAGE STYLE
+   ==================================== */
+.about-wrapper {
+  background: url('../images/bg-about.jpg') no-repeat center center / cover;
+  background-color: #4B004B;
+  position: relative;
+  color: #fffaf3;
+}
+
+.about-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(75, 0, 75, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 0;
+}
+
+.about-wrapper .container {
+  position: relative;
+  z-index: 2;
+}
+
+.text-royal {
+  color: #FFD966 !important;
+}
+
+.text-gold {
+  color: #FFD966 !important;
+}
+
+.btn-gold {
+  background: linear-gradient(90deg, #FFD966, #F2C94C);
+  color: #4B006E;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background: linear-gradient(90deg, #F2C94C, #FFD966);
+  transform: scale(1.05);
+  color: #4B006E;
+}
+/* ====================================
+   ABOUT PAGE STYLE
+   ==================================== */
+.about-wrapper {
+  background: url('../images/bg-about.jpg') no-repeat center center / cover;
+  background-color: #4B004B;
+  position: relative;
+  color: #fffaf3;
+}
+
+.about-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(75, 0, 75, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 0;
+}
+
+.about-wrapper .container {
+  position: relative;
+  z-index: 2;
+}
+
+.text-royal {
+  color: #FFD966 !important;
+}
+
+.text-gold {
+  color: #FFD966 !important;
+}
+
+.btn-gold {
+  background: linear-gradient(90deg, #FFD966, #F2C94C);
+  color: #4B006E;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background: linear-gradient(90deg, #F2C94C, #FFD966);
+  transform: scale(1.05);
+  color: #4B006E;
+}
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.btn-gold {
+  background: linear-gradient(90deg, #FFD966, #F2C94C);
+  color: #4B006E;
+  border: none;
+}
+.btn-gold:hover {
+  background: linear-gradient(90deg, #F2C94C, #FFD966);
+  color: #4B006E;
+  transform: scale(1.05);
+}
