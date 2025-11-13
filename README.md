@@ -30,6 +30,7 @@ resources/
 routes/
 .env
 composer.json
+```
 
 # ⚙️ CHỨC NĂNG CHÍNH CỦA HỆ THỐNG
 
@@ -143,8 +144,6 @@ php artisan migrate
 
 7. Chạy server:
 php artisan serve
-
-Truy cập website: http://localhost:8000
 
 ---
 
