@@ -1,7 +1,7 @@
 # 🎑 Website Bán Bánh Trung Thu – Laravel Ecommerce
 
 Dự án xây dựng website thương mại điện tử chuyên bán bánh trung thu, đảm bảo giao diện đẹp – hiện đại – chuẩn UX/UI, đồng thời hỗ trợ đầy đủ các nghiệp vụ mua sắm, thanh toán và quản trị hệ thống.
-
+Xem giao diện Figma: https://www.figma.com/design/vWGsSuoFW8KqHtZtaEJCGZ/Website_B%C3%A1n-B%C3%A1nh-Trung-Thu?node-id=0-1&t=bZY1Uw52fv5zsHym-1
 ---
 
 # 📘 Thông Tin Đồ Án
